@@ -1,0 +1,16 @@
+.GameCanvas{
+    border: 10px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,20%);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.game_area{
+    display: flex;
+    justify-content: center;
+}
