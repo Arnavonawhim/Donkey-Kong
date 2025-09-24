@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="27" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="55">
+ <editorsettings>
+  <export target="../../level1.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="level" tilewidth="1" tileheight="1" tilecount="0" columns="0"/>
+ <tileset firstgid="1" name="level 1" tilewidth="16" tileheight="16" tilecount="572" columns="22">
+  <image source="../../../../../Downloads/level 1.jpg" trans="ff00ff" width="367" height="429"/>
+ </tileset>
+ <tileset firstgid="573" name="Screenshot 2025-09-24 051515" tilewidth="16" tileheight="16" tilecount="20" columns="5">
+  <image source="../../../../../Downloads/Screenshot 2025-09-24 051515.png" trans="ff00ff" width="94" height="75"/>
+ </tileset>
+ <tileset firstgid="593" name="platform" tilewidth="16" tileheight="16" tilecount="6" columns="3">
+  <image source="../../../../../Downloads/image(1).png" trans="ff00ff" width="61" height="36"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="27" height="23">
+  <data encoding="csv">
+570,570,67,68,69,70,71,72,73,96,97,98,77,78,79,80,81,82,61,61,61,61,61,61,558,558,558,
+570,570,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,558,558,558,
+570,570,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,558,558,558,
+570,570,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,558,558,558,
+570,570,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,558,558,558,
+570,570,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,299,558,558,
+570,570,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,558,558,558,
+570,570,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,558,558,558,558,
+570,570,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,558,558,558,558,
+570,570,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,558,558,558,558,
+570,570,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,558,558,558,558,
+570,570,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,558,558,558,
+570,570,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,558,558,558,
+570,570,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,558,558,558,
+570,570,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,558,558,558,
+570,570,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,558,558,558,
+570,570,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,558,558,558,
+570,570,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,558,558,558,
+570,570,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,558,558,558,
+570,570,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,558,558,558,
+570,570,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,558,558,558,
+570,570,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,558,558,558,
+570,570,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,558,558,558
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="7" x="190.048" y="239.426" width="16.6507" height="45.933">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="8" x="165.933" y="320.383" width="16.6507" height="18.3732">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="9" x="322.105" y="292.823" width="16.6507" height="38.4689">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="10" x="95.311" y="245.167" width="14.9282" height="35.5981">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="11" x="145.263" y="229.665" width="12.0574" height="12.0574"/>
+  <object id="12" x="214.163" y="190.622" width="15.5024" height="46.5072">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="13" x="326.124" y="194.067" width="11.4833" height="38.4689">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="14" x="299.713" y="180.287" width="14.3541" height="15.5024"/>
+  <object id="15" x="153.301" y="142.967" width="19.5215" height="42.488">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="16" x="92.4402" y="144.689" width="18.9474" height="36.7464">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="17" x="179.713" y="122.871" width="15.5024" height="20.6699">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="18" x="323.828" y="94.1627" width="14.3541" height="39.6172">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="19" x="239.426" y="48.8038" width="15.5024" height="45.3589">
+   <properties>
+    <property name="type" value="ladder"/>
+   </properties>
+  </object>
+  <object id="20" x="44.7847" y="336.459" width="193.493" height="12.6316">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="21" x="240" y="333.589" width="76.3636" height="15.5024">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="22" x="293.971" y="328.995" width="91.2919" height="14.3541">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="23" x="223.923" y="291.1" width="138.947" height="16.0766">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="24" x="128.038" y="284.211" width="95.311" height="14.3541">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="28" x="42.488" y="279.043" width="92.4402" height="12.0574">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="29" x="72.3445" y="241.722" width="85.5502" height="12.0574">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="30" x="157.321" y="237.703" width="90.1435" height="13.2057">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="33" x="248.612" y="233.11" width="78.0861" height="12.6316">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="35" x="326.699" y="229.091" width="57.4163" height="10.3349">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="36" x="283.062" y="192.344" width="76.9378" height="13.7799">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="37" x="209.569" y="190.048" width="70.0478" height="11.4833">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="40" x="119.426" y="184.306" width="87.8469" height="11.4833">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="41" x="45.933" y="179.713" width="70.0478" height="11.4833">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="42" x="72.9187" y="142.392" width="79.8086" height="13.7799">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="43" x="155.598" y="138.373" width="91.866" height="13.2057">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="44" x="249.187" y="132.632" width="84.4019" height="15.5024">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="45" x="337.033" y="129.761" width="30.4306" height="11.4833">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="46" x="268.708" y="93.5885" width="91.866" height="14.3541">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="47" x="157.895" y="90.1435" width="106.794" height="13.2057">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="49" x="47.0813" y="91.2919" width="109.091" height="10.9091">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="51" x="180.861" y="49.378" width="74.6411" height="12.0574">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="53" x="245.167" y="91.866" width="41.9139" height="14.9282">
+   <properties>
+    <property name="type" value="platform"/>
+   </properties>
+  </object>
+  <object id="54" x="184.306" y="187.177" width="33.8756" height="10.9091"/>
+ </objectgroup>
+</map>
