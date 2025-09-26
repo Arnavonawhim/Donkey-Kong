@@ -173,16 +173,14 @@ barrelImage.src = "barrel_spritesheet.png";
 barrelImage.onerror = function() {
     console.error("Failed to load barrel_spritesheet.png");
 };
-barrelImage.onload = function() {
-    console.log(`Barrel sprite loaded: ${barrelImage.width}x${barrelImage.height}`);
-};
+barrelImage.onload = function() {};
 
 const barrel_width = 50;
 const barrel_height = 43;
 
 let barrels = [];
 let barrelSpawnTimer = 0;
-const BARREL_SPAWN_INTERVAL = 120;
+const BARREL_SPAWN_INTERVAL = 300; 
 
 const Barrel_animation_states = [{
         name: 'Rolling',
@@ -219,13 +217,13 @@ Barrel_animation_states.forEach((state) => {
 const BARREL_PATH = [{
         y: 200,
         startX: 350,
-        endX: 875,
+        endX: 950,
         direction: 1,
-        fallToNextX: 875
+        fallToNextX: 950
     },
     {
         y: 320,
-        startX: 874,
+        startX: 950,
         endX: 250,
         direction: -1,
         fallToNextX: 250
@@ -235,7 +233,7 @@ const BARREL_PATH = [{
         startX: 250,
         endX: 880,
         direction: 1,
-        fallToNextX: 150
+        fallToNextX: 880
     },
     {
         y: 550,
@@ -254,9 +252,9 @@ const BARREL_PATH = [{
     {
         y: 650,
         startX: 170,
-        endX: 860,
+        endX: 950,
         direction: 1,
-        fallToNextX: 860
+        fallToNextX: 950
     },
     {
         y: 812,
@@ -273,7 +271,7 @@ class Barrel {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.velocityX = 2.5;
+        this.velocityX = 3.5;
         this.velocityY = 0;
         this.state = 'Falling';
         this.currentLevel = -1;
@@ -354,8 +352,6 @@ class Barrel {
             this.currentLevel = targetLevel;
             this.frameTimer = 0;
             this.currentFrame = 0;
-
-            console.log(`Barrel landed on level ${targetLevel} at x:${targetPath.startX}, y:${targetPath.y}`);
         }
     }
 
@@ -415,7 +411,6 @@ class Barrel {
 function spawnBarrel() {
     const barrel = new Barrel(KongX + kong_width + 10, KongY + kong_height - 20);
     barrels.push(barrel);
-    console.log(`Spawned barrel at x:${barrel.x}, y:${barrel.y}`);
 }
 
 function updateBarrels() {
@@ -430,7 +425,7 @@ function updateBarrels() {
         kong_state = 'Barrel';
         setTimeout(() => {
             kong_state = 'Chest';
-        }, 1000);
+        }, 500);
     }
 
     for (let i = 0; i < barrels.length; i++) {
@@ -472,6 +467,23 @@ function drawGameOverScreen() {
 
     ctx.textAlign = 'left';
 }
+
+function drawWinScreen() {
+    ctx.fillStyle = 'rgba(0, 128, 0, 0.8)';
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 48px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('YOU WON!', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 50);
+
+    ctx.fillStyle = 'white';
+    ctx.font = '24px Arial';
+    ctx.fillText('Press R to Play Again', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 20);
+
+    ctx.textAlign = 'left';
+}
+
 
 function restartGame() {
     gameState = 'playing';
@@ -518,7 +530,7 @@ class InputHandler {
             if (allowedKeys.includes(e.key) && !this.keys.includes(e.key)) {
                 this.keys.push(e.key);
 
-                if ((e.key === 'r' || e.key === 'R') && gameState === 'gameOver') {
+                if ((e.key === 'r' || e.key === 'R') && (gameState === 'gameOver' || gameState === 'won')) {
                     restartGame();
                 }
             }
@@ -540,6 +552,13 @@ function updatePlayer() {
     }
 
     if (gameState !== 'playing') return;
+    
+    // Win Condition
+    if (MarioY <= 25) {
+        gameState = 'won';
+        return;
+    }
+
 
     if (MarioX > 975 || MarioX < 150) {
         gameState = 'dead';
@@ -689,7 +708,10 @@ function animate() {
 
     if (gameState === 'gameOver') {
         drawGameOverScreen();
+    } else if (gameState === 'won') {
+        drawWinScreen();
     }
+
 
     debugCollisions();
     debugBarrelCollisions();
