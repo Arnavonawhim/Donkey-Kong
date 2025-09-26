@@ -703,7 +703,6 @@ function animate() {
         }
 
         drawBarrels();
-        drawBarrelPaths();
     }
 
     if (gameState === 'gameOver') {
@@ -713,8 +712,6 @@ function animate() {
     }
 
 
-    debugCollisions();
-    debugBarrelCollisions();
     gameframe++;
     requestAnimationFrame(animate);
 }
