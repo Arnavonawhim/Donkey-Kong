@@ -169,7 +169,7 @@ Kong_animation_states.forEach((state) => {
 });
 
 const barrelImage = new Image();
-barrelImage.src = "/barrel_spritesheet.png";
+barrelImage.src = "./barrel_spritesheet.png";
 barrelImage.onerror = function() {
     console.error("Failed to load barrel_spritesheet.png");
 };
